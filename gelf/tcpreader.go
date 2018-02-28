@@ -140,7 +140,7 @@ func handleConnection(conn net.Conn, messages chan<- []byte, dropSignal chan str
 	}
 }
 
-func (r *TCPReader) readMessage() (*Message, error) {
+func (r *TCPReader) ReadMessage() (*Message, error) {
 	b := <-r.messages
 
 	var msg Message
